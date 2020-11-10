@@ -1,0 +1,17 @@
+{
+  "name": "img-resizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "claudia create --role Lambda_Executor --version dev --region eu-west-1 --layers arn:aws:lambda:eu-west-1:637752207950:layer:sharp-layer:1 --handler lambda.handler --no-optional-dependencies --profile immigreat-dev",
+    "update": "claudia update set-version --version dev --layers arn:aws:lambda:eu-west-1:637752207950:layer:sharp-layer:1 --profile --no-optional-dependencies immigreat-dev",
+    "release": "claudia set-version --version production --profile immigreat-dev"
+  },
+  "author": "Leandro Hoffmann",
+  "license": "ISC",
+  "optionalDependencies": {
+    "aws-sdk": "^2.648.0",
+    "sharp": "^0.25.2"
+  }
+}

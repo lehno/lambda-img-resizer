@@ -1,0 +1,8 @@
+{
+  "lambda": {
+    "role": "Lambda_Executor",
+    "name": "img-resizer",
+    "region": "eu-west-1",
+    "sharedRole": true
+  }
+}
